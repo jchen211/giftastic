@@ -13,7 +13,7 @@ function generateBtn () {
     }
 }
 
-$("#add-movie").on("click", function(e) {
+$("#add-game").on("click", function(e) {
     event.preventDefault();
 
     var games = $('#game-input').val().trim();
@@ -23,6 +23,7 @@ $("#add-movie").on("click", function(e) {
 });
 
 generateBtn();
+
 // this on click function shows the gifs that are already pre-loaded
 $('button').on("click", function() {
 
