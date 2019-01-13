@@ -7,6 +7,7 @@ function generateBtn () {
 
     for (var i = 0; i < gameArr.length; i++) {
         var g = $('<button>');
+        g.addClass('game-btn');
         g.attr('data-game', gameArr[i]);
         g.text(gameArr[i]);
         $('#gameName').append(g);
@@ -25,6 +26,8 @@ $("#add-game").on("click", function(e) {
 generateBtn();
 
 // this on click function shows the gifs that are already pre-loaded
+function getGifs () {
+
 $('button').on("click", function() {
 
     var game = $(this).attr('data-game');
@@ -61,5 +64,9 @@ $('button').on("click", function() {
 
             }
         });
-});
+    });
+    }
+
+$(document).on("click", ".game-btn", getGifs);
+
 });
