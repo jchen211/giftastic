@@ -17,24 +17,19 @@
         </div>
 
         <div class='row'>
-            <p>search goes here</p>
+            <form id='game-form'>
+                <label for="game-input"></label>
+                <input type="text" id="game-input"><br>
+          
+                <!-- Button triggers new movie to be added -->
+                <input id="add-game" type="submit" value="add">
+              </form>
         </div>
+        
+        <!--buttons added to here-->
+        <div class='row' id='gameName'> </div>
 
-        <div class='row'>
-            <button data-game = 'Final Fantasy VII'>
-                Final Fantasy VII
-            </button>
-            <button data-game = 'The Legend of Zelda: Breath of the Wild'>
-                The Legend of Zelda: Breath of the Wild
-            </button>
-            <button data-game = 'Pokémon: Yellow'>
-                Pokémon: Yellow
-            </button>
-            <button data-game = 'Chrono Trigger'>
-                Chrono Trigger
-            </button>
-        </div>
-
+        <!--ratings and gifs appear here-->
         <div class='row'>
             <p>ratings</p>
             <div id='images'>gifs</p>
