@@ -59,9 +59,7 @@ $('button').on("click", function() {
                     gifDiv.append(gameImg);
 
                     $('#images').prepend(gifDiv);
-
                 }
-
             }
         });
     });
