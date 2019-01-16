@@ -24,7 +24,7 @@ $('button').on("click", function() {
 
                     var gifDiv = $("<div class='gifGames'>");
 
-                    var p = $('<p>').text('Rating: ' + rating);
+                    var p = $('<p>').text('rating: ' + rating);
 
                     var gameImg = $('<img>');
 
@@ -41,23 +41,22 @@ $('button').on("click", function() {
                     $('#images').prepend(gifDiv);
                 }
             }
-                    $('.gif-imgs').on("click", function() {
-                        var state = $(this).attr('data-state');
-                        if (state === 'still') {
-                          $(this).attr('src', $(this).attr('data-animate'));
-                          $(this).attr('data-state', 'animate');
-                        } else {
-                          $(this).attr('src', $(this).attr('data-still'));
-                          $(this).attr("data-state", 'still');
-                        }
-                      }); 
-               
-             
+                    
+            $('.gif-imgs').on("click", function() {
+                var state = $(this).attr('data-state');
+
+                if (state === 'still') {
+                     $(this).attr('src', $(this).attr('data-animate'));
+                     $(this).attr('data-state', 'animate');
+
+                } else {
+                     $(this).attr('src', $(this).attr('data-still'));
+                     $(this).attr("data-state", 'still');
+                }
+            });    
         });
     });
-
-      
-    }
+}
 
 function generateBtn () {
     $('#gameName').empty();
