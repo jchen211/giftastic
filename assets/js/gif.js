@@ -41,13 +41,13 @@ $('button').on("click", function() {
                     $('#images').prepend(gifDiv);
                     
                     $('.gif-imgs').on("click", function() {
-                        var state = $(gameImg).attr("data-game");
+                        var state = $(this).attr("data-state");
                         if (state === "still") {
-                          $(gameImg).attr("src", $(gameImg).attr("data-animate"));
-                          $(gameImg).attr("data-state", "animate");
+                          $(this).attr("src", $(this).attr("data-animate"));
+                          $(this).attr("data-state", "animate");
                         } else {
-                          $(gameImg).attr("src", $(gameImg).attr("data-still"));
-                          $(gameImg).attr("data-state", "still");
+                          $(this).attr("src", $(this).attr("data-still"));
+                          $(this).attr("data-state", "still");
                         }
                       }); 
                
