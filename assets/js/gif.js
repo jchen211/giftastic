@@ -30,7 +30,7 @@ $('button').on("click", function() {
 
                     gameImg.addClass('gif-imgs');
 
-                    gameImg.attr('src', results[i].images.fixed_height.url);
+                    gameImg.attr('src', results[i].images.fixed_height_still.url);
                     gameImg.attr('data-still', results[i].images.fixed_height_still.url);
                     gameImg.attr('data-state', 'still');
                     gameImg.attr('data-animate', results[i].images.fixed_height.url);
@@ -84,7 +84,6 @@ $("#add-game").on("click", function(e) {
 
     generateBtn();
 
-    $('#game-form').reset();
 });
     
 $(document).on('click', '.game-btn', getGifs);
