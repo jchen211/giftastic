@@ -31,38 +31,33 @@ $('button').on("click", function() {
                     gameImg.addClass('gif-imgs');
 
                     gameImg.attr('src', results[i].images.fixed_height_still.url);
-                    gameImg.attr('data-still', results[i].images.fixed_height_still.url);
                     gameImg.attr('data-state', 'still');
+                    gameImg.attr('data-still', results[i].images.fixed_height_still.url);
                     gameImg.attr('data-animate', results[i].images.fixed_height.url);
 
                     gifDiv.append(p);
                     gifDiv.append(gameImg);
 
                     $('#images').prepend(gifDiv);
-                    
+                }
+            }
                     $('.gif-imgs').on("click", function() {
-                        var state = $(this).attr("data-state");
-                        if (state === "still") {
-                          $(this).attr("src", $(this).attr("data-animate"));
-                          $(this).attr("data-state", "animate");
+                        var state = $(this).attr('data-state');
+                        if (state === 'still') {
+                          $(this).attr('src', $(this).attr('data-animate'));
+                          $(this).attr('data-state', 'animate');
                         } else {
-                          $(this).attr("src", $(this).attr("data-still"));
-                          $(this).attr("data-state", "still");
+                          $(this).attr('src', $(this).attr('data-still'));
+                          $(this).attr("data-state", 'still');
                         }
                       }); 
                
-                }
-            }
+             
         });
     });
 
       
     }
-
-
-
-
-
 
 function generateBtn () {
     $('#gameName').empty();
@@ -76,7 +71,7 @@ function generateBtn () {
     }
 }
 
-$("#add-game").on("click", function(e) {
+$("#add-game").on('click', function(e) {
     e.preventDefault();
 
     var games = $('#game-input').val().trim();
