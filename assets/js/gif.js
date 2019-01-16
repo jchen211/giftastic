@@ -2,7 +2,6 @@ $(document).ready(function() {
 
 var gameArr = ['Final Fantasy VII', 'Legend of Zelda', 'Pokémon: Yellow', 'Chrono Trigger', 'Mario Kart'];
 
-// this on click function shows the gifs that are already pre-loaded
 function getGifs () {
 
 $('button').on("click", function() {
@@ -40,24 +39,27 @@ $('button').on("click", function() {
                     gifDiv.append(gameImg);
 
                     $('#images').prepend(gifDiv);
-
+                    
+                    $('.gif-imgs').on("click", function() {
+                        var state = $(gameImg).attr("data-game");
+                        if (state === "still") {
+                          $(gameImg).attr("src", $(gameImg).attr("data-animate"));
+                          $(gameImg).attr("data-state", "animate");
+                        } else {
+                          $(gameImg).attr("src", $(gameImg).attr("data-still"));
+                          $(gameImg).attr("data-state", "still");
+                        }
+                      }); 
                
                 }
             }
         });
-        $('.gif-imgs').on("click", function() {
-            var state = $(this).attr("data-game");
-            if (state === "still") {
-              $(this).attr("src", $(this).attr("data-animate"));
-              $(this).attr("data-state", "animate");
-            } else {
-              $(this).attr("src", $(this).attr("data-still"));
-              $(this).attr("data-state", "still");
-            }
-          }); 
-          
     });
+
+      
     }
+
+
 
 
 
