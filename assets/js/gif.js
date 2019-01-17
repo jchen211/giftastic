@@ -4,7 +4,6 @@ var gameArr = ['Final Fantasy VII', 'Legend of Zelda', 'Pokémon: Yellow', 'Chro
 
 function getGifs () {
 
-$('button').on("click", function() {
 
     var game = $(this).attr('data-game');
 
@@ -18,7 +17,7 @@ $('button').on("click", function() {
 
         .then(function(gg) {
             var results = gg.data;
-            for (var i = 0; i < results.length; i++) {
+            for (var i = 0; i < 6; i++) {
                 if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
                     var rating = results[i].rating;
 
@@ -55,8 +54,8 @@ $('button').on("click", function() {
                 }
             });    
         });
-    });
-}
+    }
+
 
 function generateBtn () {
     $('#gameName').empty();
